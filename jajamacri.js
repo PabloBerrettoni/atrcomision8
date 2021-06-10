@@ -1,30 +1,40 @@
 let users = [
     {
-        name:"Emanuel",
-        lastname:"Arroyo",
-        edad: 29
+        name: "Emanuel",
+        lastName: "Arroyo",
+        age: 29
     },
     {
         name: "Luciano",
-        lastname: "Firbo",
-        edad: 23
+        lastName: "Firbo",
+        age: 23
     },
     {
         name: "Pablo",
-        lastname: "Berrettoni -.-",
-        edad: 23
-    },{
+        lastName: "Berrettoni -.-",
+        age: 23
+    }, {
         name: "Pablo",
-        lastname: "Escobar",
-        edad: 29
-    },{
+        lastName: "Escobar",
+        age: 29
+    }, {
         name: "Yamila",
-        lastname: "Correa",
-        edad: 28
+        lastName: "Correa",
+        age: 28
     },
     {
-    name : "Yamila",
-    lastname : "Vera Lopez",
-    edad : "22"
-},
+        name: "Yamila",
+        lastName: "Vera Lopez",
+        age: 22
+    },
+    {
+        name: 'Manuel',
+        lastName: 'Salvador',
+        age: 22
+    },
+    {
+        name: "Emilce",
+        lastName: "Espinoza",
+        age: 30,
+    }
 ]
