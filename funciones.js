@@ -62,9 +62,7 @@ module.exports = moduloFunciones = {
             });
         }
         
-        lista.map(()=> listaAnterior.push(productos))
-        
-        moduloFunciones.guardarJSON(lista)
+        moduloFunciones.guardarJSON(listaA)
         
     }
 
