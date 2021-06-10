@@ -33,8 +33,28 @@ let users = [
         age: 22
     },
     {
+        name: 'Ricardo',
+        lastName: 'Arroyo',
+        age: 48
+    },
+    {
         name: "Emilce",
         lastName: "Espinoza",
         age: 30,
     },
+    {
+        name: "Maximo",
+        lastName: "Arebalo",
+        age: 21
+    }
+   
 ]
+
+saludar = () =>{
+    users.forEach((user)=>{
+     console.log(`Hola mi nombre es ${user.name} ${user.lastName} y tengo ${user.age} años`);
+    })
+}
+saludar()
+
+let hola = "hola";
