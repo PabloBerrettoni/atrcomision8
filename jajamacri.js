@@ -57,4 +57,12 @@ saludar = () =>{
 }
 saludar()
 
+// Aca hice un for-of que hace exactamente lo mismo que el foreach de arriba, solo queria mostrarlo xD
+/* saludar = () =>{
+    for (let user of users) {
+        console.log(`Hola mi nombre es ${user.name} ${user.lastName} y tengo ${user.age} años`);
+    }
+}
+saludar() */
+
 let hola = "hola";
