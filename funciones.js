@@ -1,73 +1,53 @@
 let fs = require('fs');
 
-module.exports = moduloFunciones = {
-    leerJSON : () => {
-        let listaDeProductos = fs.readFileSync('./productos.json', 'utf-8');
-        return JSON.parse(listaDeProductos)
-    },
-    escribirJSON: (producto, marca, precio, stock, descripcion, categoria) => {
+module.exports = modulesFunctions = {
+    readJSON :() =>JSON.parse(fs.readFileSync('./productos.json', 'utf-8')),
+
+    writeJSON: (producto, marca, precio, stock, descripcion, categoria) => {
         let nuevoProducto = {
-            Producto : producto,
-            Marca : marca,
-            Precio : precio,
-            Stock : stock,
-            Descripcion : descripcion,
-            Categoria : categoria,
-            Codigo : this.codigoUnico()
+            producto : producto,
+            marca : marca,
+            precio : Number(precio),
+            stock : Number(stock),
+            descripcion : descripcion,
+            categoria : categoria.toLowerCase(),
+            codigo : modulesFunctions.codeOnly()
         }
-        let listaAnterior = moduloFunciones.leerJSON();
+        let listaAnterior = modulesFunctions.readJSON();
 
         listaAnterior.push(nuevoProducto);
-        moduloFunciones.guardarJSON(listaAnterior)
+        modulesFunctions.saveJSON(listaAnterior)
     },
-    guardarJSON: (info) =>{
-        let nuevoJSON = JSON.stringify(info)
-        fs.writeFileSync('./productos.json', nuevoJSON, 'utf-8')
+    saveJSON: (info) =>{
+        fs.writeFileSync('./productos.json', JSON.stringify(info), 'utf-8')
     },
     deshacer: () => {
-        let productos = moduloFunciones.leerJSON()
+        let productos = modulesFunctions.readJSON()
         productos.pop();
-        moduloFunciones.guardarJSON(productos);
+        modulesFunctions.saveJSON(productos);
     },
-    filtrarPorCategoria: (categoria) => {
-        let listaDeProductos = moduloFunciones.leerJSON()
-        let productosFiltrados = listaDeProductos.filter(producto => {
-            return producto.categoria.toLowerCase() === categoria.toLowerCase();
-        })
-        return productosFiltrados
+    filterForCategory: (cate) => {
+        let listaDeProductos = modulesFunctions.readJSON()        
+        let filtrados = listaDeProductos.filter(producto =>producto.categoria === cate)
+        filtrados.forEach(element =>console.log('\n' + element.descripcion ))        
     },
-    codigoUnico : () => {
-        let misCodigos = moduloFunciones.leerJSON()
+    codeOnly : () => {
+        let misCodigos = modulesFunctions.readJSON()
         let codigo = Math.floor(Math.random()*(1 + 9999))
-        for (let i = 0; i < misCodigos.length; i++) {
-            if(misCodigos[i].codigo === codigo){
-               return this.codigoUnico()
-            }
-            return codigo;
-        }
-
+            misCodigos.forEach(element =>{
+                return element.codigo===codigo?codigo:""
+            })
+            return codigo
     },
-    filtrarPorCodigo : (codigo, cantidad) => {
-        let listaA = moduloFunciones.leerJSON();
-        let productos = listaA.filter(producto => {
-            return producto.Codigo === codigo;
-        })
-
-
-        if(productos){
-            productos.forEach(producto => {
-
-              producto.Stock = parseInt(producto.Stock) + cantidad; 
-                
-            });
+    filterForCode : (codigo) => {
+        let listaA = modulesFunctions.readJSON();
+        let productos = listaA.filter(producto =>producto.codigo === Number(codigo))
+        let elementosFiltrados = productos.forEach(element =>console.log(`\nProducto : - ${element.producto} \nDescripcion : - ${element.descripcion} \nCodigo: ${element.codigo} \nStock: ${element.stock} \nPrecio : $${element.precio}`))   
+        if(codigo!=null){
+        return elementosFiltrados
+        }else{
+           return console.log("No existe ningun elemento con ese dato");
         }
-        
-        moduloFunciones.guardarJSON(listaA)
-        
     }
-
 }
 
-//console.log(moduloFunciones.filtrarPorEstado("terminado"));
-
-console.log(moduloFunciones.filtrarPorCodigo(4409, 3));
