@@ -6,12 +6,12 @@ let users = [
     },
     {
         name: "Luciano",
-        lastname: "Berrettoni -.-",
+        lastname: "Firbo",
         edad: 23
     },
     {
         name: "Pablo",
-        lastname: "Ojotas",
+        lastname: "Berrettoni -.-",
         edad: 23
     },{
         name: "Pablo",
