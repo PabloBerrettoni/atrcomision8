@@ -14,13 +14,11 @@ module.exports = modulesFunctions = {
             codigo : modulesFunctions.codeOnly()
         }
         let listaAnterior = modulesFunctions.readJSON();
-
         listaAnterior.push(nuevoProducto);
         modulesFunctions.saveJSON(listaAnterior)
     },
-    saveJSON: (info) =>{
-        fs.writeFileSync('./productos.json', JSON.stringify(info), 'utf-8')
-    },
+    saveJSON: (info) =>fs.writeFileSync('./productos.json', JSON.stringify(info), 'utf-8'),
+    
     deshacer: () => {
         let productos = modulesFunctions.readJSON()
         productos.pop();
@@ -33,7 +31,7 @@ module.exports = modulesFunctions = {
     },
     codeOnly : () => {
         let misCodigos = modulesFunctions.readJSON()
-        let codigo = Math.floor(Math.random()*(1 + 9999))
+        const codigo = Math.floor(Math.random()*(1 + 9999))
             misCodigos.forEach(element =>{
                 return element.codigo===codigo?codigo:""
             })
@@ -42,12 +40,7 @@ module.exports = modulesFunctions = {
     filterForCode : (codigo) => {
         let listaA = modulesFunctions.readJSON();
         let productos = listaA.filter(producto =>producto.codigo === Number(codigo))
-        let elementosFiltrados = productos.forEach(element =>console.log(`\nProducto : - ${element.producto} \nDescripcion : - ${element.descripcion} \nCodigo: ${element.codigo} \nStock: ${element.stock} \nPrecio : $${element.precio}`))   
-        if(codigo!=null){
-        return elementosFiltrados
-        }else{
-           return console.log("No existe ningun elemento con ese dato");
-        }
+        let elementosFiltrados = productos.forEach(element =>console.log(`\nProducto : - ${element.producto} \nDescripcion : - ${element.descripcion} \nCodigo: ${element.codigo} \nStock: ${element.stock} \nPrecio : $${element.precio}`))          
     }
 }
 
