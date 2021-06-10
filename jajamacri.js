@@ -26,4 +26,5 @@ let users = [
     name : "Yamila",
     lastname : "Vera Lopez",
     edad : "22"
-},]
+},
+]
