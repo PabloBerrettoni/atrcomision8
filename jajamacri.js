@@ -13,11 +13,13 @@ let users = [
         name: "Pablo",
         lastName: "Berrettoni -.-",
         age: 23
-    }, {
+    }, 
+    {
         name: "Pablo",
         lastName: "Escobar",
         age: 29
-    }, {
+    }, 
+    {
         name: "Yamila",
         lastName: "Correa",
         age: 28
