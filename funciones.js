@@ -32,9 +32,7 @@ module.exports = modulesFunctions = {
     codeOnly : () => {
         let misCodigos = modulesFunctions.readJSON()
         const codigo = Math.floor(Math.random()*(1 + 9999))
-            misCodigos.forEach(element =>{
-                return element.codigo===codigo?codigo:""
-            })
+            misCodigos.forEach(element =>element.codigo===codigo?codigo:"")
             return codigo
     },
     filterForCode : (codigo) => {
