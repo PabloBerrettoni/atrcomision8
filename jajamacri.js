@@ -42,4 +42,12 @@ let users = [
         lastName: "Espinoza",
         age: 30,
     }
+   
 ]
+
+saludar = () =>{
+    users.forEach((user)=>{
+     console.log(`Hola mi nombre es ${user.name} ${user.lastName} y tengo ${user.age} años`);
+    })
+}
+saludar()
