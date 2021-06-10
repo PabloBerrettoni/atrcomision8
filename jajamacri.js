@@ -2,55 +2,54 @@ let users = [
     {
         name: "Emanuel",
         lastName: "Arroyo",
-        edad: 29
+        age: 29
     },
     {
         name: "Luciano",
         lastName: "Firbo",
-        edad: 23
+        age: 23
     },
     {
         name: "Pablo",
         lastName: "Berrettoni -.-",
-        edad: 23
+        age: 23
     }, {
         name: "Pablo",
         lastName: "Escobar",
-        edad: 29
+        age: 29
     }, {
         name: "Yamila",
         lastName: "Correa",
-        edad: 28
+        age: 28
     },
     {
         name: "Yamila",
         lastName: "Vera Lopez",
-        edad: "22"
+        age: 22
     },
     {
         name: 'Manuel',
         lastName: 'Salvador',
-        edad: 22
+        age: 22
     },
+    {
+        name: 'Ricardo',
+        lastName: 'Arroyo',
+        age: 48
+    },
+    {
+        name: "Emilce",
+        lastName: "Espinoza",
+        age: 30,
+    }
+   
 ]
 
+saludar = () =>{
+    users.forEach((user)=>{
+     console.log(`Hola mi nombre es ${user.name} ${user.lastName} y tengo ${user.age} años`);
+    })
+}
+saludar()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let hola = 'hola';
+let hola = "hola";
