@@ -2,35 +2,39 @@ let users = [
     {
         name: "Emanuel",
         lastName: "Arroyo",
-        edad: 29
+        age: 29
     },
     {
         name: "Luciano",
         lastName: "Firbo",
-        edad: 23
+        age: 23
     },
     {
         name: "Pablo",
         lastName: "Berrettoni -.-",
-        edad: 23
+        age: 23
     }, {
         name: "Pablo",
         lastName: "Escobar",
-        edad: 29
+        age: 29
     }, {
         name: "Yamila",
         lastName: "Correa",
-        edad: 28
+        age: 28
     },
     {
         name: "Yamila",
         lastName: "Vera Lopez",
-        edad: "22"
+        age: 22
     },
     {
         name: 'Manuel',
         lastName: 'Salvador',
-        edad: 22
+        age: 22
     },
-    
+    {
+        name: "Emilce",
+        lastName: "Espinoza",
+        age: 30,
+    }
 ]
