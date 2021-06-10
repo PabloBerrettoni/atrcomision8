@@ -25,7 +25,7 @@ let users = [
     {
         name: "Yamila",
         lastName: "Vera Lopez",
-        age: "22"
+        age: 22
     },
     {
         name: 'Manuel',
@@ -37,4 +37,9 @@ let users = [
         lastName: 'Arroyo',
         age: 48
     },
+    {
+        name: "Emilce",
+        lastName: "Espinoza",
+        age: 30,
+    }
 ]
