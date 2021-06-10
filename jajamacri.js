@@ -11,10 +11,14 @@ let users = [
     },
     {
         name: "Pablo",
-        lastname: "Berrettoni",
+        lastname: "Ojotas",
         edad: 23
     },{
         name: "Pablo",
         lastname: "Escobar",
         edad: 29
+    },{
+        name: "Yamila",
+        lastname: "Correa",
+        edad: 28
     }]
