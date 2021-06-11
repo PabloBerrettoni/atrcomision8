@@ -1,44 +1,75 @@
 let fs = require('fs');
 
-module.exports = modulesFunctions = {
-    readJSON :() =>JSON.parse(fs.readFileSync('./productos.json', 'utf-8')),
-
-    writeJSON: (producto, marca, precio, stock, descripcion, categoria) => {
+module.exports = moduloFunciones = {
+    leerJSON : () => {
+        let listaDeProductos = fs.readFileSync('./productos.json', 'utf-8');
+        return JSON.parse(listaDeProductos)
+    },
+    escribirJSON: (producto, marca, precio, stock, descripcion, categoria) => {
         let nuevoProducto = {
-            producto : producto,
-            marca : marca,
-            precio : Number(precio),
-            stock : Number(stock),
-            descripcion : descripcion,
-            categoria : categoria.toLowerCase(),
-            codigo : modulesFunctions.codeOnly()
+            Producto : producto,
+            Marca : marca,
+            Precio : precio,
+            Stock : stock,
+            Descripcion : descripcion,
+            Categoria : categoria,
+            Codigo : this.codigoUnico()
         }
-        let listaAnterior = modulesFunctions.readJSON();
+        let listaAnterior = moduloFunciones.leerJSON();
+
         listaAnterior.push(nuevoProducto);
-        modulesFunctions.saveJSON(listaAnterior)
+        moduloFunciones.guardarJSON(listaAnterior)
     },
-    saveJSON: (info) =>fs.writeFileSync('./productos.json', JSON.stringify(info), 'utf-8'),
-    
+    guardarJSON: (info) =>{
+        let nuevoJSON = JSON.stringify(info)
+        fs.writeFileSync('./productos.json', nuevoJSON, 'utf-8')
+    },
     deshacer: () => {
-        let productos = modulesFunctions.readJSON()
+        let productos = moduloFunciones.leerJSON()
         productos.pop();
-        modulesFunctions.saveJSON(productos);
+        moduloFunciones.guardarJSON(productos);
     },
-    filterForCategory: (cate) => {
-        let listaDeProductos = modulesFunctions.readJSON()        
-        let filtrados = listaDeProductos.filter(producto =>producto.categoria === cate)
-        filtrados.forEach(element =>console.log('\n' + element.descripcion ))        
+    filtrarPorCategoria: (categoria) => {
+        let listaDeProductos = moduloFunciones.leerJSON()
+        let productosFiltrados = listaDeProductos.filter(producto => {
+            return producto.categoria.toLowerCase() === categoria.toLowerCase();
+        })
+        return productosFiltrados
     },
-    codeOnly : () => {
-        let misCodigos = modulesFunctions.readJSON()
-        const codigo = Math.floor(Math.random()*(1 + 9999))
-            misCodigos.forEach(element =>element.codigo===codigo?codigo:"")
-            return codigo
+    codigoUnico : () => {
+        let misCodigos = moduloFunciones.leerJSON()
+        let codigo = Math.floor(Math.random()*(1 + 9999))
+        for (let i = 0; i < misCodigos.length; i++) {
+            if(misCodigos[i].codigo === codigo){
+               return this.codigoUnico()
+            }
+            return codigo;
+        }
+
     },
-    filterForCode : (codigo) => {
-        let listaA = modulesFunctions.readJSON();
-        let productos = listaA.filter(producto =>producto.codigo === Number(codigo))
-        let elementosFiltrados = productos.forEach(element =>console.log(`\nProducto : - ${element.producto} \nDescripcion : - ${element.descripcion} \nCodigo: ${element.codigo} \nStock: ${element.stock} \nPrecio : $${element.precio}`))          
+    filtrarPorCodigo : (codigo, cantidad) => {
+        let listaA = moduloFunciones.leerJSON();
+        let productos = listaA.filter(producto => {
+            return producto.Codigo === codigo;
+        })
+
+
+        if(productos){
+            productos.forEach(producto => {
+
+              producto.Stock = parseInt(producto.Stock) + cantidad; 
+                
+            });
+        }
+        
+        lista.map(()=> listaAnterior.push(productos))
+        
+        moduloFunciones.guardarJSON(lista)
+        
     }
+
 }
 
+//console.log(moduloFunciones.filtrarPorEstado("terminado"));
+
+console.log(moduloFunciones.filtrarPorCodigo(4409, 3));
