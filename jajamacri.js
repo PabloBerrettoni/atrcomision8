@@ -13,11 +13,13 @@ let users = [
         name: "Pablo",
         lastName: "Berrettoni -.-",
         age: 23
-    }, {
+    }, 
+    {
         name: "Pablo",
         lastName: "Escobar",
         age: 29
-    }, {
+    }, 
+    {
         name: "Yamila",
         lastName: "Correa",
         age: 28
@@ -57,6 +59,8 @@ saludar = () =>{
 }
 saludar()
 
+let hola = "hola";
+
 // Aca hice un for-of que hace exactamente lo mismo que el foreach de arriba, solo queria mostrarlo xD
 /* saludar = () =>{
     for (let user of users) {
@@ -64,5 +68,3 @@ saludar()
     }
 }
 saludar() */
-
-let hola = "hola";
