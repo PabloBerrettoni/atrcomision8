@@ -1,1 +1,20 @@
-[{"producto":"Tako Pore Serum Control Gel Cream","marca":"TONYMOLY","precio":2450,"stock":18,"descripcion":"TONYMOLY Tako Pore Serum Control Gel Cream porque estás lista para levantarte, nena! ¡Deja que los calamares Tako tha aclaren tu piel con este gel humectante formulado con una sensación ligera para controlar el aceite y el exceso de sebo, manteniendo tu piel fresca y saludable!","categoria":"perfumeria","codigo":4409},{"producto":"Tako Pore Serum Control Gel Cream","marca":"TONYMOLY","precio":2450,"stock":10,"descripcion":"TONYMOLY Tako Pore Serum Control Gel Cream porque estás lista para levantarte, nena! ¡Deja que los calamares Tako tha aclaren tu piel con este gel humectante formulado con una sensación ligera para controlar el aceite y el exceso de sebo, manteniendo tu piel fresca y saludable!","categoria":"perfumeria","codigo":4419},{"producto":"perfume","marca":"Natura","precio":120,"stock":10,"descripcion":"Perfume con olor a cola","categoria":"perfumeria","codigo":9761},{"producto":"perfume","marca":"Natura","precio":189,"stock":1849,"descripcion":"fragancias raras","categoria":"perfumeria","codigo":7624}]
+[
+  {
+    "Producto": "Tako Pore Serum Control Gel Cream",
+    "Marca": "TONYMOLY",
+    "Precio": "2450",
+    "Stock": 18,
+    "Descripcion": "TONYMOLY Tako Pore Serum Control Gel Cream porque estás lista para levantarte, nena! ¡Deja que los calamares Tako tha aclaren tu piel con este gel humectante formulado con una sensación ligera para controlar el aceite y el exceso de sebo, manteniendo tu piel fresca y saludable!",
+    "Categoria": "Cuidado personal y belleza",
+    "Codigo": 4409
+  },
+  {
+    "Producto": "Tako Pore Serum Control Gel Cream",
+    "Marca": "TONYMOLY",
+    "Precio": "2450",
+    "Stock": 10,
+    "Descripcion": "TONYMOLY Tako Pore Serum Control Gel Cream porque estás lista para levantarte, nena! ¡Deja que los calamares Tako tha aclaren tu piel con este gel humectante formulado con una sensación ligera para controlar el aceite y el exceso de sebo, manteniendo tu piel fresca y saludable!",
+    "Categoria": "Cuidado personal y belleza",
+    "Codigo": 4419
+  }
+]
