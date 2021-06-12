@@ -51,8 +51,11 @@ let users = [
         name: "Ignacio",
         lastName: "Mora",
         age: 23
-    }
-   
+    },
+    { name : "Eliana",
+    lastName: "Paliza",
+    age: 21
+       },
 ]
 
 saludar = () =>{
