@@ -1,6 +1,6 @@
 
 
-class Estudiante {
+class Student {
     constructor(){
         this.name = null
         this.lastName = null
@@ -79,3 +79,5 @@ class Teacher {
         this.materia = newMateria
     }
 }
+
+module.exports = {Student,Teacher}
