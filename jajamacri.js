@@ -46,6 +46,11 @@ let users = [
         name: "Maximo",
         lastName: "Arebalo",
         age: 21
+    },
+    {
+        name: "Ignacio",
+        lastName: "Mora",
+        age: 23
     }
    
 ]
