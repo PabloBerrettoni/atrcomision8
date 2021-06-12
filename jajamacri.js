@@ -70,4 +70,6 @@ saludar()
 }
 saludar() */
 
+let promedioDeEdad =()=>{}
+
 let hola = "hola";
