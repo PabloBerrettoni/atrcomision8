@@ -1,13 +1,4 @@
-
-let string = {
-    capitalice(text){   /*
-                        let arr = text.split("")
-                         arr[0]=arr[0].toUpperCase()
-                        return arr.join("") */
-    let firstLetter = text[0].toUpperCase()
-    return firstLetter + text.slice(1)
-    }
-}
+const functions = require('./functions')
 class Student {
     constructor(){
         this.name = null
@@ -20,11 +11,11 @@ class Student {
     }
 
     setName(newName){
-        this.name = string.capitalice(newName)
+        this.name = functions.capitalice(newName)
     }
 
     setLastName(newLastName){
-        this.lastName = string.capitalice(newLastName)
+        this.lastName = functions.capitalice(newLastName)
     }
 
     setAge(newAge){
@@ -40,7 +31,7 @@ class Student {
     }
 
     setTeacher(newTeacher){
-        this.teacher = string.capitalice(newTeacher)
+        this.teacher = functions.capitalice(newTeacher)
     }
 
     setMaterias(newMateria){
@@ -60,11 +51,11 @@ class Teacher {
     }
 
     setName(newName){
-        this.name = string.capitalice(newName)
+        this.name = functions.capitalice(newName)
     }
 
     setLastName(newLastName){
-        this.lastName = string.capitalice(newLastName)
+        this.lastName = functions.capitalice(newLastName)
     }
 
     setAge(newAge){
@@ -80,7 +71,7 @@ class Teacher {
     }
 
     setStudents(newStudent){
-        this.students = string.capitalice(newStudent)
+        this.students = functions.capitalice(newStudent)
     }
 
     setMaterias(newMateria){
