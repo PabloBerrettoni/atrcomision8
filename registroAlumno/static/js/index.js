@@ -11,6 +11,15 @@ window.onload = () => {
                 case 'lastName':
                     document.getElementById('birthDate').focus()
                     break
+                case 'birthDate':
+                    document.getElementById('username').focus()
+                    break
+                case 'lastName':
+                    document.getElementById('password').focus()
+                    break
+                case 'password':
+                    document.getElementById('passwordConfirm').focus()
+                    break
             }
 
 
