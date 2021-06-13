@@ -66,6 +66,11 @@ let users = [
         name: "Luis Molina",
         lastName: "Molina",
         age: 28
+    },
+    {
+        name: "Yesica",
+        lastName: "Do Campo",
+        age: 32
     }
 ]
 
@@ -85,19 +90,12 @@ saludar()
 saludar() */
 
 let edad = []
-let totalEdad = users.reduce((acum, user) => { 
-  return  acum + user.age
- },0)
+let totalEdad = users.reduce((acum, user) => {
+    return acum + user.age
+}, 0)
 
 
 let promedioEdad = Math.round(totalEdad / users.length)
 console.log('El promedio es de edad es ' + promedioEdad)
-
-
-
-
-
-
-
 
 let hola = "hola";
