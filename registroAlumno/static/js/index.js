@@ -20,13 +20,17 @@ window.onload = () => {
                 case 'password':
                     document.getElementById('passwordConfirm').focus()
                     break
+                case 'passwordConfirm':
+                    let nombre = document.getElementById()
+                    break
             }
 
 
-
+            
 
 
         } 
     } )
 
 }
+
