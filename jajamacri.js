@@ -52,24 +52,26 @@ let users = [
         lastName: "Mora",
         age: 23
     },
-    { name : "Eliana",
-    lastName: "Paliza",
-    age: 21
-       },
-    { name : "Matias",
-    lastName: "Minchaca",
-    age: 19
-       },
     {
-        name : "Luis Molina",
-        lastName : "Molina",
-        age : 28
+        name: "Eliana",
+        lastName: "Paliza",
+        age: 21
+    },
+    {
+        name: "Matias",
+        lastName: "Minchaca",
+        age: 19
+    },
+    {
+        name: "Luis Molina",
+        lastName: "Molina",
+        age: 28
     }
 ]
 
-saludar = () =>{
-    users.forEach((user)=>{
-     console.log(`Hola mi nombre es ${user.name} ${user.lastName} y tengo ${user.age} años`);
+saludar = () => {
+    users.forEach((user) => {
+        console.log(`Hola mi nombre es ${user.name} ${user.lastName} y tengo ${user.age} años`);
     })
 }
 saludar()
@@ -82,6 +84,20 @@ saludar()
 }
 saludar() */
 
-let promedioDeEdad =()=>{}
+let edad = []
+let totalEdad = users.reduce((acum, user) => { 
+  return  acum + user.age
+ },0)
+
+
+let promedioEdad = Math.round(totalEdad / users.length)
+console.log('El promedio es de edad es ' + promedioEdad)
+
+
+
+
+
+
+
 
 let hola = "hola";
