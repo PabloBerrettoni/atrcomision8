@@ -1,0 +1,84 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.contenedor-formulario {
+    background-color: #003cff99;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+    background-color: #3cc3ded9;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    border: 2px black solid;
+}
+
+.formulario > div {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #00ff325c;
+    border-radius: 15px;
+    border: 2px #583cf57d solid;
+}
+
+.formulario ul {
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    width: 95%;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario ul input {
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #ffffffe6;
+    padding-left: 10px;
+}
+
+.formulario ul span {
+    width: 50%;
+}
+
+.botonCrear {
+    background: linear-gradient(26deg, rgb(6 150 11 / 63%) 0%, rgb(12 251 150 / 84%) 100%);
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    border: 1px #000000 solid;
+    font-size: 20px;
+}
+
+.containerButton {
+    height: 10%;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px black solid; */
+}
