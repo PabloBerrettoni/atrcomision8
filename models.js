@@ -1,5 +1,13 @@
 
-
+let string = {
+    capitalice(text){   /*
+                        let arr = text.split("")
+                         arr[0]=arr[0].toUpperCase()
+                        return arr.join("") */
+    let firstLetter = text[0].toUpperCase()
+    return firstLetter + text.slice(1)
+    }
+}
 class Student {
     constructor(){
         this.name = null
@@ -12,11 +20,11 @@ class Student {
     }
 
     setName(newName){
-        this.name = newName
+        this.name = string.capitalice(newName)
     }
 
     setLastName(newLastName){
-        this.lastName = newLastName
+        this.lastName = string.capitalice(newLastName)
     }
 
     setAge(newAge){
@@ -32,7 +40,7 @@ class Student {
     }
 
     setTeacher(newTeacher){
-        this.teacher = newTeacher
+        this.teacher = string.capitalice(newTeacher)
     }
 
     setMaterias(newMateria){
@@ -52,11 +60,11 @@ class Teacher {
     }
 
     setName(newName){
-        this.name = newName
+        this.name = string.capitalice(newName)
     }
 
     setLastName(newLastName){
-        this.lastName = newLastName
+        this.lastName = string.capitalice(newLastName)
     }
 
     setAge(newAge){
@@ -72,7 +80,7 @@ class Teacher {
     }
 
     setStudents(newStudent){
-        this.students = newStudent
+        this.students = string.capitalice(newStudent)
     }
 
     setMaterias(newMateria){
@@ -81,3 +89,4 @@ class Teacher {
 }
 
 module.exports = {Student,Teacher}
+
