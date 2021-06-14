@@ -6,17 +6,41 @@ function crearUsuario( nombre, lastName, birthDate, username, password ){
         username: username,
         password: password
     }
-    funciones.cargarDb()
+    
+    fetch(`${window.origin}/crearUsuario`, {
+        method: "POST",
+        credentials: "include",
+        body: JSON.stringify(user),
+        cache: "no-cache",
+        headers: new Headers({
+            "content-type": "application/json"
+        })
+    }).then((response) => {if (response.status !== 200) {
+        console.log(`Looks like there was a problem. Status code: ${response.status}`);
+        return;
+    }
+    response.json().then(function (respuesta) {
+        let estado = respuesta['STATUS']
+        if ( estado == 'OK'){
+            console.log('El usuario se creo con exito')
+        } else {
+            console.log('Error al crear usuario')
+        }
+    });
+    }).catch(function (error) {
+        console.log("Fetch error: " + error);
+    });
+
+
+
 }
 
 
 
 window.onload = () => {
     document.addEventListener('keypress', (event)=>{
-        console.log(event)
         if (event.key == 'Enter'){
             //document.getElementById('lastName').focus()
-            console.log(event.path[0])
             let elementoId = event.path[0].getAttribute('id')
             switch (elementoId){
                 case 'name':
@@ -40,7 +64,8 @@ window.onload = () => {
                     let birthDate = document.getElementById('birthDate').value
                     let username = document.getElementById('username').value
                     let password = document.getElementById('password').value
-                    if ( nombre && lastName && birthDate && username && password){
+                    let passwordConf = document.getElementById('passwordConfirm').value
+                    if ( nombre && lastName && birthDate && username && password && password == passwordConf){
                         crearUsuario( nombre, lastName, birthDate, username, password )
                     }
                     break
