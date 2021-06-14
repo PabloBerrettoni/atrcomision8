@@ -6,7 +6,10 @@ function crearUsuario( nombre, lastName, birthDate, username, password ){
         username: username,
         password: password
     }
+    funciones.cargarDb()
 }
+
+
 
 window.onload = () => {
     document.addEventListener('keypress', (event)=>{
