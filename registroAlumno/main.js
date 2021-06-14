@@ -1,4 +1,9 @@
-const express = require('express')
+//npm init                      con esto creamos el directorio del servidor
+//npm install express           instalamos el modulo express, que es el motor del servidor
+//npm install body-parser       instalamos el modulo body-parser, que procesa el mensaje que envia el usuario como json
+//node run app.js
+
+const express = require('express') //Arrancamos el motor de express
 const bodyParser = require('body-parser')
 const app = express()
 app.use(bodyParser.json())
